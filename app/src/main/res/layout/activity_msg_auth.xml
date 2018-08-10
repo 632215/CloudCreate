@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tx_tips"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/tx_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_28"
+        android:gravity="left"
+        android:text="@string/activity_msg_confirm_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tx_phone_tips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/activity_msg_confirm_phone_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_phone"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <ImageView
+        android:id="@+id/img_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:src="@mipmap/icon_msg_auth_msg_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_phone_tips"
+        app:srcCompat="@mipmap/icon_msg_auth_msg_bg" />
+
+    <TextView
+        android:id="@+id/tx_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:text="@string/activity_msg_confirm_msg"
+        app:layout_constraintBottom_toBottomOf="@+id/img_msg"
+        app:layout_constraintStart_toStartOf="@+id/img_msg"
+        app:layout_constraintTop_toTopOf="@+id/img_msg" />
+
+    <TextView
+        android:id="@+id/tx_copy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:gravity="right"
+        android:text="@string/activity_msg_confirm_msg_copy"
+        android:textColor="@color/activity_msg_auth_text1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_msg"
+        app:layout_constraintEnd_toEndOf="@+id/img_msg"
+        app:layout_constraintStart_toEndOf="@+id/tx_msg"
+        app:layout_constraintTop_toTopOf="@+id/img_msg" />
+
+    <ImageView
+        android:id="@+id/img_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@mipmap/icon_msg_auth_msg_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_msg"
+        app:srcCompat="@mipmap/icon_msg_auth_msg_bg" />
+
+    <TextView
+        android:id="@+id/tx_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:text="@string/activity_msg_confirm_msg_target"
+        app:layout_constraintBottom_toBottomOf="@+id/img_target"
+        app:layout_constraintStart_toStartOf="@+id/img_target"
+        app:layout_constraintTop_toTopOf="@+id/img_target" />
+
+    <ImageView
+        android:id="@+id/img_send_fast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:src="@mipmap/icon_login_login"
+        app:layout_constraintEnd_toEndOf="@+id/img_target"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/img_target"
+        app:layout_constraintTop_toBottomOf="@+id/img_target"
+        app:layout_constraintWidth_percent="0.7"
+        app:srcCompat="@mipmap/icon_login_login" />
+
+    <TextView
+        android:id="@+id/tx_send_fast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_msg_confirm_msg_send_fast"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_send_fast"
+        app:layout_constraintEnd_toEndOf="@+id/img_send_fast"
+        app:layout_constraintStart_toStartOf="@+id/img_send_fast"
+        app:layout_constraintTop_toTopOf="@+id/img_send_fast" />
+
+    <TextView
+        android:id="@+id/tx_send_fast_tips"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="@string/activity_msg_confirm_msg_send_fast_tips"
+        app:layout_constraintEnd_toEndOf="@+id/img_send_fast"
+        app:layout_constraintStart_toStartOf="@+id/img_send_fast"
+        app:layout_constraintTop_toBottomOf="@+id/img_send_fast" />
+
+    <ImageView
+        android:id="@+id/img_send_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:src="@mipmap/icon_login_login"
+        app:layout_constraintEnd_toEndOf="@+id/img_target"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/img_target"
+        app:layout_constraintTop_toBottomOf="@+id/tx_send_fast_tips"
+        app:layout_constraintWidth_percent="0.7"
+        app:srcCompat="@mipmap/icon_login_login" />
+
+    <TextView
+        android:id="@+id/tx_send_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_msg_confirm_msg_send_hand"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_send_hand"
+        app:layout_constraintEnd_toEndOf="@+id/img_send_hand"
+        app:layout_constraintStart_toStartOf="@+id/img_send_hand"
+        app:layout_constraintTop_toTopOf="@+id/img_send_hand" />
+
+    <TextView
+        android:id="@+id/tx_send_hand_tips"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="@string/activity_msg_confirm_msg_send_hand_tips"
+        app:layout_constraintEnd_toEndOf="@+id/img_send_hand"
+        app:layout_constraintStart_toStartOf="@+id/img_send_hand"
+        app:layout_constraintTop_toBottomOf="@+id/img_send_hand" />
+</android.support.constraint.ConstraintLayout>

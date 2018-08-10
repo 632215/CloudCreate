@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/shape_circle_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/activity_register_upload"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/activity_register_text2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_head"
+        app:layout_constraintEnd_toEndOf="@+id/img_head"
+        app:layout_constraintStart_toStartOf="@+id/img_head"
+        app:layout_constraintTop_toTopOf="@+id/img_head" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/sp_13"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_register_phone"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_register_phone_tips"
+        android:textColorHint="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_head"
+        app:layout_constraintWidth_percent="0.7"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tx_line_name"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_25"
+        android:textSize="@dimen/sp_13"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_register_mail"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_register_mail_tips"
+        android:textColorHint="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line_name"
+        app:layout_constraintWidth_percent="0.7"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tx_line_mail"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_mail"
+        app:layout_constraintStart_toStartOf="@+id/et_mail"
+        app:layout_constraintTop_toBottomOf="@+id/et_mail" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_25"
+        android:textSize="@dimen/sp_13"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_register_pwd"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_register_pwd_tips"
+        android:inputType="textPassword"
+        android:textColorHint="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line_mail"
+        app:layout_constraintWidth_percent="0.7"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tx_line_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+    <ImageView
+        android:id="@+id/img_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_70"
+        android:src="@mipmap/icon_register_bg"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line_pwd"
+        app:layout_constraintWidth_percent="0.7"
+        app:srcCompat="@mipmap/icon_register_bg" />
+
+    <TextView
+        android:id="@+id/tx_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_register_register"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_register"
+        app:layout_constraintEnd_toEndOf="@+id/img_register"
+        app:layout_constraintStart_toStartOf="@+id/img_register"
+        app:layout_constraintTop_toTopOf="@+id/img_register" />
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_register">
+
+        <TextView
+            android:id="@+id/tx_has_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_register_has_tips"
+            android:textColor="@color/activity_register_text1"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tx_has"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tx_has_tips"
+            android:text="@string/activity_register_login"
+            android:textColor="@color/activity_register_text2"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rules"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_login">
+
+        <TextView
+            android:id="@+id/tx_self_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_register_self_tips"
+            android:textColor="@color/activity_register_text1"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tx_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tx_self_tips"
+            android:text="@string/activity_register_self"
+            android:textColor="@color/activity_register_text2"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tx_rule_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tx_self"
+            android:text="@string/activity_register_rule_tips"
+            android:textColor="@color/activity_register_text1"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tx_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tx_rule_tips"
+            android:text="@string/activity_register_rule"
+            android:textColor="@color/activity_register_text2"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

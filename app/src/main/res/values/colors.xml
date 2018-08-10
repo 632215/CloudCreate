@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="title_bg">#079ECD</color>
+    <color name="color_progress">#DC143C</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_bg">#F5F5F5</color>
+    <color name="color_red">#ff3921</color>
+
+    <color name="activity_login_line">#989898</color>
+    <color name="activity_login_text1">#079ECB</color>
+    <color name="activity_login_text2">#E9E9E9</color>
+
+    <color name="activity_register_text1">#cccccc</color>
+    <color name="activity_register_text2">#05a0cc</color>
+
+    <color name="activity_reset_pwd_text1">#919191</color>
+    <color name="activity_reset_pwd_text2">#909090</color>
+    <color name="activity_reset_pwd_text3">#20559a</color>
+
+    <color name="activity_msg_auth_text1">#20559a</color>
+
+    <color name="activity_main_text_selected">#4cff5e</color>
+    <color name="activity_main_text_un_selected">#303030</color>
+
+    <color name="activity_add_text1">#919191</color>
+
+    <color name="fragment_msg_text1">#000000</color>
+    <color name="fragment_msg_text2">#cbd8db</color>
+
+    <color name="ic_back_press">#323336</color>
+    <color name="ip_color_primary">#393A3F</color>
+    <color name="ip_color_primary_dark">#303135</color>
+    <color name="ip_color_primary_trans">#ec2f3335</color>
+    <color name="ip_color_press">#ffe0e0e0</color>
+    <color name="ip_camera_pre">#353535</color>
+    <color name="ip_color_accent">#1AAD19</color>
+    <color name="ip_text_secondary_inverted">#66ffffff</color>
+    <color name="ip_text_primary_inverted">#ffffff</color>
+    <color name="color_blue">#32A4E9</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">云上科创</string>
+    <string name="app_net_tips">暂无网络，请检查网络连接！</string>
+
+    <string name="activity_login_name_tips">手机/用户名/邮箱</string>
+    <string name="activity_login_pwd_tips">密码</string>
+    <string name="activity_login_login">登录</string>
+    <string name="activity_login_visitor">游客登录</string>
+    <string name="activity_login_register">立即注册</string>
+    <string name="activity_login_third">第三方登录</string>
+    <string name="activity_login_qq">QQ</string>
+    <string name="activity_login_wechat">微信</string>
+    <string name="activity_login_ali">支付宝</string>
+
+    <string name="activity_register_upload">上传头像</string>
+    <string name="activity_register_phone_tips">手机号</string>
+    <string name="activity_register_mail_tips">请输入邮箱</string>
+    <string name="activity_register_pwd_tips">请输入密码</string>
+    <string name="activity_register_register">立即注册</string>
+    <string name="activity_register_has_tips">已有账号？</string>
+    <string name="activity_register_login">立即登录</string>
+    <string name="activity_register_self_tips">注册即代表阅读并同意</string>
+    <string name="activity_register_self">政策隐私</string>
+    <string name="activity_register_rule_tips">和</string>
+    <string name="activity_register_rule">使用条款</string>
+    <string name="activity_register_input_name">请输入姓名！</string>
+    <string name="activity_register_input_mail">请输入邮箱！</string>
+    <string name="activity_register_input_pwd">请输入密码！</string>
+
+    <string name="activity_reset_pwd_title">重置密码</string>
+    <string name="activity_reset_pwd_user">账号：</string>
+    <string name="activity_reset_pwd_user_num">手机号/邮箱</string>
+    <string name="activity_reset_pwd_user_num_hint">请输入你注册时的账号</string>
+    <string name="activity_reset_pwd_sure">确定</string>
+
+    <string name="activity_set_title">请设置密码</string>
+    <string name="activity_set_pwd_please">请设置新密码</string>
+    <string name="activity_set_pwd_confirm">确定密码</string>
+    <string name="activity_set_pwd_sure">确定</string>
+
+    <string name="activity_msg_confirm">短信认证</string>
+    <string name="activity_msg_confirm_phone">请用密保手机152********发送短信，</string>
+    <string name="activity_msg_confirm_phone_next">然后点击“我已发送”按钮</string>
+    <string name="activity_msg_confirm_msg">发送短信：*******</string>
+    <string name="activity_msg_confirm_msg_copy">复制</string>
+    <string name="activity_msg_confirm_msg_target">到手机号：*******</string>
+    <string name="activity_msg_confirm_msg_send_fast">快速发送</string>
+    <string name="activity_msg_confirm_msg_send_fast_tips">如果浏览器不支持快速发送短信，请手动发送短信。</string>
+    <string name="activity_msg_confirm_msg_send_hand">手动发送</string>
+    <string name="activity_msg_confirm_msg_send_hand_tips">短信费用0.1元/条，全部由运营收取。</string>
+
+    <string name="activity_main_sale">热卖</string>
+    <string name="activity_main_shop_car">购物车</string>
+    <string name="activity_main_human">人脉商圈</string>
+    <string name="activity_main_msg">消息</string>
+    <string name="activity_main_communication">通讯录</string>
+    <string name="activity_main_my">我的</string>
+    <string name="activity_main_title">首页</string>
+    <string name="activity_main_game">游戏</string>
+    <string name="activity_main_stock">股票</string>
+    <string name="activity_main_government">政府</string>
+    <string name="activity_main_platform">平台</string>
+
+    <string name="popu_add_group">加群</string>
+    <string name="popu_add_friend">加好友</string>
+    <string name="popu_create_group">创建群</string>
+    <string name="popu_scan">扫一扫</string>
+    <string name="popu_pay">收付款</string>
+    <string name="popu_help">帮助与反馈</string>
+
+    <string name="activity_add_title">添加</string>
+    <string name="activity_add_human">找人</string>
+    <string name="activity_add_group">找群</string>
+    <string name="activity_add_public">找公众号</string>
+
+    <string name="activity_add_search">好友/群名称/公众号</string>
+    <string name="activity_add_more">查看更多</string>
+    <string name="activity_add_contact">添加手机联系人</string>
+    <string name="activity_add_contact_tips">添加或者邀请通讯录中的好友</string>
+    <string name="activity_add_public_tips">精品推荐</string>
+
+    <string name="activity_create_public_title">创建群</string>
+    <string name="activity_create_public_title_second">编辑群资料</string>
+    <string name="activity_create_public_name">群名称</string>
+    <string name="activity_create_public_type">群分类</string>
+    <string name="activity_create_public_address">群地址</string>
+    <string name="activity_create_public_describe">群描述</string>
+    <string name="activity_create_public_describe_limit">群简介（不超过300字）</string>
+    <string name="activity_create_public_submit">提交</string>
+
+    <string name="ip_all_images">所有图片</string>
+    <string name="ip_folder_image_count">共%1$d张</string>
+    <string name="ip_preview_image_count">%1$d/%2$d</string>
+    <string name="ip_select_limit">最多选择%1$d张图片</string>
+    <string name="ip_complete">完成</string>
+    <string name="ip_select_complete">完成(%1$d/%2$d)</string>
+    <string name="ip_preview">预览</string>
+    <string name="ip_preview_count">预览(%1$d)</string>
+    <string name="ip_photo_crop">图片裁剪</string>
+    <string name="ip_origin">原图</string>
+    <string name="ip_origin_size">原图(%1$s)</string>
+
+</resources>

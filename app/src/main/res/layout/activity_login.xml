@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/img_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_login_leave" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:src="@mipmap/icon_login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_exit"
+        app:srcCompat="@mipmap/icon_login_logo" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_login_name"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_login_name_tips"
+        android:textColorHint="@color/activity_login_line"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tx_line_name"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_login_pwd"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_login_pwd_tips"
+        android:textColorHint="@color/activity_login_line"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <ImageView
+        android:id="@+id/img_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/icon_login_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/et_pwd"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintTop_toTopOf="@+id/et_pwd"
+        app:srcCompat="@mipmap/icon_login_reset" />
+
+    <TextView
+        android:id="@+id/tx_line_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+    <ImageView
+        android:id="@+id/img_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_70"
+        android:src="@mipmap/icon_login_login"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd"
+        app:layout_constraintWidth_percent="0.7"
+        app:srcCompat="@mipmap/icon_login_login" />
+
+    <TextView
+        android:id="@+id/tx_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_login_login"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_login"
+        app:layout_constraintEnd_toEndOf="@+id/img_login"
+        app:layout_constraintStart_toStartOf="@+id/img_login"
+        app:layout_constraintTop_toTopOf="@+id/img_login" />
+
+    <TextView
+        android:id="@+id/tx_line"
+        android:layout_width="@dimen/dp_0_5"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_login_line"
+        app:layout_constraintBottom_toBottomOf="@+id/tx_visitor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tx_visitor" />
+
+    <TextView
+        android:id="@+id/tx_visitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_35"
+        android:text="@string/activity_login_visitor"
+        android:textColor="@color/activity_login_text1"
+        app:layout_constraintEnd_toStartOf="@+id/tx_line"
+        app:layout_constraintTop_toBottomOf="@+id/img_login" />
+
+    <TextView
+        android:id="@+id/tx_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_35"
+        android:text="@string/activity_login_register"
+        android:textColor="@color/activity_login_text1"
+        app:layout_constraintStart_toEndOf="@+id/tx_line"
+        app:layout_constraintTop_toBottomOf="@+id/img_login" />
+
+    <TextView
+        android:id="@+id/tx_third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        android:text="@string/activity_login_third"
+        android:textColor="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line" />
+
+    <TextView
+        android:id="@+id/tx_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:drawableTop="@mipmap/icon_login_qq"
+        android:gravity="center_horizontal"
+        android:text="@string/activity_login_qq"
+        android:textColor="@color/activity_login_line"
+        app:layout_constraintEnd_toStartOf="@+id/tx_wechat"
+        app:layout_constraintStart_toStartOf="@+id/img_login"
+        app:layout_constraintTop_toTopOf="@+id/tx_wechat" />
+
+    <TextView
+        android:id="@+id/tx_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:drawableTop="@mipmap/icon_login_wechat"
+        android:gravity="center_horizontal"
+        android:text="@string/activity_login_wechat"
+        android:textColor="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_third" />
+
+    <TextView
+        android:id="@+id/tx_ali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:drawableTop="@mipmap/icon_login_ali"
+        android:gravity="center_horizontal"
+        android:text="@string/activity_login_ali"
+        android:textColor="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/img_login"
+        app:layout_constraintStart_toEndOf="@+id/tx_wechat"
+        app:layout_constraintTop_toTopOf="@+id/tx_wechat" />
+</android.support.constraint.ConstraintLayout>

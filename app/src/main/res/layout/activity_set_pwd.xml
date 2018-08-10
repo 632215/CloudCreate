@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:textSize="@dimen/sp_13"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_set_pwd"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_set_pwd_please"
+        android:textColorHint="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tx_line_pwd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+    <EditText
+        android:id="@+id/et_pwd_confirm"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_set_pwd"
+        android:drawablePadding="@dimen/dp_5"
+        android:hint="@string/activity_set_pwd_confirm"
+        android:textSize="@dimen/sp_13"
+        android:textColorHint="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line_pwd"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tx_line_pwd_confirm"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/activity_login_line"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd_confirm"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd_confirm" />
+
+    <ImageView
+        android:id="@+id/img_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_35"
+        android:src="@mipmap/icon_reset_pwd_sure_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_line_pwd_confirm"
+        app:srcCompat="@mipmap/icon_reset_pwd_sure_bg" />
+
+    <TextView
+        android:id="@+id/tx_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_reset_pwd_sure"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_sure"
+        app:layout_constraintEnd_toEndOf="@+id/img_sure"
+        app:layout_constraintStart_toStartOf="@+id/img_sure"
+        app:layout_constraintTop_toTopOf="@+id/img_sure" />
+</android.support.constraint.ConstraintLayout>

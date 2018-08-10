@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.asLody:turbodex-1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/turbodex-1.1.0.aar/32449e6c115e8ea1ce31900929c269ca/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/turbodex-1.1.0.aar/32449e6c115e8ea1ce31900929c269ca/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.asLody/turbodex/1.1.0/11c41e3cb48db3dc0604343bd94a50dfe992550c/turbodex-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
