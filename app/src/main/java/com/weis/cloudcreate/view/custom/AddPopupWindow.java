@@ -72,10 +72,11 @@ public class AddPopupWindow extends PopupWindow implements View.OnClickListener 
             popupWindow.dismiss();
         switch (view.getId()) {
             case R.id.cl_add_group:
-                context.startActivity(new Intent(context, AddActivity.class));
+                context.startActivity(new Intent(context, AddActivity.class).putExtra("index",1));
                 break;
 
             case R.id.cl_add_friend:
+                context.startActivity(new Intent(context, AddActivity.class).putExtra("index",0));
                 break;
 
             case R.id.cl_create_group:

@@ -40,7 +40,7 @@ public class MsgFragment extends BaseFragment {
     protected void initView(View view, Bundle savedInstanceState) {
         list = new ArrayList<>();
         list.add(new MsgBean(R.mipmap.ic_launcher_round, "hello", "你好", "2"));
-        list.add(new MsgBean(R.mipmap.ic_launcher_round, "hello", "你好", "3"));
+        list.add(new MsgBean(R.mipmap.ic_launcher_round, "往常阿飞还阿三", "你好", "3"));
         list.add(new MsgBean(R.mipmap.ic_launcher_round, "hello", "你好", "4"));
         list.add(new MsgBean(R.mipmap.ic_launcher_round, "hello", "你好", "4"));
         list.add(new MsgBean(R.mipmap.ic_launcher_round, "hello", "你好", "4"));

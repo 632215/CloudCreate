@@ -17,85 +17,47 @@
         <ImageView
             android:id="@+id/img_add"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/sp_15"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_5"
             android:src="@mipmap/icon_main_add" />
 
         <ImageView
             android:id="@+id/img_search"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/sp_15"
             android:layout_toStartOf="@+id/img_add"
+            android:padding="@dimen/dp_5"
             android:src="@mipmap/icon_main_search" />
 
         <ImageView
             android:id="@+id/img_online"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/sp_15"
             android:layout_toStartOf="@+id/img_search"
-            android:src="@mipmap/icon_mian_online" />
+            android:padding="@dimen/dp_5"
+            android:src="@mipmap/icon_main_online" />
 
         <ImageView
             android:id="@+id/img_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/sp_15"
             android:layout_toStartOf="@+id/img_online"
             android:src="@mipmap/icon_main_more" />
 
-        <LinearLayout
-            android:id="@+id/ll_toolbar"
+        <com.weis.cloudcreate.view.custom.FillRecycleView
+            android:id="@+id/recycle_view_business"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp_15"
-            android:layout_marginRight="@dimen/dp_15"
-            android:layout_toStartOf="@+id/img_more"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tx_platform"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/activity_main_platform"
-                android:textColor="@color/color_white" />
-
-            <TextView
-                android:id="@+id/tx_government"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/activity_main_government"
-                android:textColor="@color/color_white" />
-
-            <TextView
-                android:id="@+id/tx_stock"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/activity_main_stock"
-                android:textColor="@color/color_white" />
-
-            <TextView
-                android:id="@+id/tx_game"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/activity_main_game"
-                android:textColor="@color/color_white" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:layout_toStartOf="@+id/img_more" />
     </RelativeLayout>
 
     <FrameLayout

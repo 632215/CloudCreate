@@ -1,9 +1,12 @@
 package com.weis.cloudcreate.view.activity;
 
-import android.os.Bundle;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,8 +17,10 @@ import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.presenter.BasePresenter;
+import com.weis.cloudcreate.view.adapter.BusinessAdapter;
 import com.weis.cloudcreate.view.custom.AddPopupWindow;
 import com.weis.cloudcreate.view.custom.CustomRadioButton;
+import com.weis.cloudcreate.view.custom.FillRecycleView;
 import com.weis.cloudcreate.view.fragment.CarFragment;
 import com.weis.cloudcreate.view.fragment.CommunicationFragment;
 import com.weis.cloudcreate.view.fragment.HumanFragment;
@@ -23,8 +28,10 @@ import com.weis.cloudcreate.view.fragment.MsgFragment;
 import com.weis.cloudcreate.view.fragment.MyFragment;
 import com.weis.cloudcreate.view.fragment.SaleFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
@@ -57,14 +64,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     ImageView imgOnline;
     @BindView(R.id.img_more)
     ImageView imgMore;
-    @BindView(R.id.tx_platform)
-    TextView txPlatform;
-    @BindView(R.id.tx_government)
-    TextView txGovernment;
-    @BindView(R.id.tx_stock)
-    TextView txStock;
-    @BindView(R.id.tx_game)
-    TextView txGame;
+    @BindView(R.id.recycle_view_business)
+    FillRecycleView recycleViewBusiness;
     @BindView(R.id.textView2)
     TextView textView2;
 
@@ -76,6 +77,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private MsgFragment msgFragment;
     private CommunicationFragment communicationFragment;
     private MyFragment myFragment;
+    private AddPopupWindow addPopupWindow;
+
+    private BusinessAdapter businessAdapter;
+    private List<String> businessList;
 
     @Override
     protected int getContentView() {
@@ -92,6 +97,25 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         setTitleText(getString(R.string.activity_main_title), View.GONE);
         setDefaultFragment();
         addDrawerListener();
+    }
+
+    //初始化商业行的数据
+    private void initBuinessData() {
+        if (businessList == null)
+            businessList = new ArrayList<>();
+        businessList.clear();
+        businessList.add("平台");
+        businessList.add("政府");
+        businessList.add("股票");
+        businessList.add("游戏");
+        businessList.add("医疗");
+        businessList.add("故事");
+        businessAdapter = new BusinessAdapter(this, businessList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        linearLayoutManager.setSmoothScrollbarEnabled(true);
+        recycleViewBusiness.setLayoutManager(linearLayoutManager);
+        recycleViewBusiness.setAdapter(businessAdapter);
     }
 
     //监听侧边栏事件
@@ -179,18 +203,15 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             , R.id.img_add
             , R.id.img_search
             , R.id.img_online
-            , R.id.img_more
-            , R.id.tx_game
-            , R.id.tx_stock
-            , R.id.tx_government
-            , R.id.tx_platform})
+            , R.id.img_more})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tx_main_left:
                 controlMainLeft(1);
                 break;
             case R.id.img_add:
-                AddPopupWindow addPopupWindow = new AddPopupWindow();
+                if (addPopupWindow == null)
+                    addPopupWindow = new AddPopupWindow();
                 addPopupWindow.initPopupWindow(this, imgAdd);
                 break;
 
@@ -198,18 +219,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 break;
 
             case R.id.img_online:
-                break;
-
-            case R.id.tx_game:
-                break;
-
-            case R.id.tx_stock:
-                break;
-
-            case R.id.tx_government:
-                break;
-
-            case R.id.tx_platform:
                 break;
         }
     }
@@ -234,5 +243,11 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         lp.alpha = alpha;
         getWindow().setAttributes(lp);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initBuinessData();
     }
 }

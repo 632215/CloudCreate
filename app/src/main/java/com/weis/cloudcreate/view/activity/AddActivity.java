@@ -45,6 +45,7 @@ public class AddActivity extends BaseActivity {
         setTitleText(getString(R.string.activity_add_title), View.VISIBLE);
         initData();
         initTab();
+        viewPage.setCurrentItem(getIntent().getIntExtra("index",0));
     }
 
     private void initData() {

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tx_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:padding="@dimen/dp_15"
+            android:text="@string/activity_setting_accout"
+            android:textColor="@color/fragment_msg_text1"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tx_account_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:drawableLeft="@mipmap/icon_setting_account"
+            android:drawableRight="@mipmap/icon_setting_more"
+            android:gravity="center"
+            android:text="@string/activity_setting_protect"
+            android:textColor="@color/activity_add_text1"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_account"
+            app:layout_constraintEnd_toEndOf="@+id/tx_account"
+            app:layout_constraintTop_toTopOf="@+id/tx_account" />
+
+        <TextView
+            android:id="@+id/tx_line_account"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@color/color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_account" />
+
+        <TextView
+            android:id="@+id/tx_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_15"
+            android:text="@string/activity_setting_clear"
+            android:textColor="@color/fragment_msg_text1"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_account" />
+
+        <TextView
+            android:id="@+id/tx_clear_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:drawableRight="@mipmap/icon_setting_more"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_clear"
+            app:layout_constraintEnd_toEndOf="@+id/tx_clear"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_account" />
+
+        <TextView
+            android:id="@+id/tx_line_clear"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@color/color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_clear" />
+
+        <TextView
+            android:id="@+id/tx_help"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:padding="@dimen/dp_15"
+            android:text="@string/activity_setting_help"
+            android:textColor="@color/fragment_msg_text1"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_clear" />
+
+        <TextView
+            android:id="@+id/tx_help_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:drawableRight="@mipmap/icon_setting_more"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/tx_line_help"
+            app:layout_constraintEnd_toEndOf="@+id/tx_help"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_about" />
+
+        <TextView
+            android:id="@+id/tx_line_help"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@color/color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_help" />
+
+        <TextView
+            android:id="@+id/tx_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_15"
+            android:text="@string/activity_setting_about"
+            android:textColor="@color/fragment_msg_text1"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_help" />
+
+        <TextView
+            android:id="@+id/tx_about_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:drawableRight="@mipmap/icon_setting_more"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_about"
+            app:layout_constraintEnd_toEndOf="@+id/tx_about"
+            app:layout_constraintTop_toBottomOf="@+id/tx_line_help" />
+
+        <TextView
+            android:id="@+id/tx_line_about"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@color/color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_clear" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tx_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_15"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/activity_setting_exit"
+        android:textColor="@color/fragment_msg_text1"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_base" />
+</android.support.constraint.ConstraintLayout>

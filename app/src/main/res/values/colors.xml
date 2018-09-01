@@ -22,10 +22,16 @@
 
     <color name="activity_msg_auth_text1">#20559a</color>
 
-    <color name="activity_main_text_selected">#4cff5e</color>
+    <color name="activity_main_text_selected">#0FB4F5</color>
     <color name="activity_main_text_un_selected">#303030</color>
 
     <color name="activity_add_text1">#919191</color>
+
+    <color name="activity_dialog_bg">#e0e0e0</color>
+    <color name="activity_dialog_text1">#a1a1a1</color>
+
+
+    <color name="activity_my_package_text1">#535353</color>
 
     <color name="fragment_msg_text1">#000000</color>
     <color name="fragment_msg_text2">#cbd8db</color>

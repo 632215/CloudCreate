@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/title_bg"
+    android:paddingTop="@dimen/dp_20">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/title_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tx_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_arrow_back"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_8"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tx_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="5"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_18"
+                tools:text="title" />
+
+            <TextView
+                android:id="@+id/tx_title_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tx_title"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_toEndOf="@+id/tx_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                tools:text="(解释)" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tx_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14"
+            tools:text="前进" />
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/title_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_root">
+
+        <TextView
+            android:id="@+id/tx_dialog_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_arrow_back"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_8"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tx_name"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_8"
+            android:ellipsize="end"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toEndOf="@+id/tx_dialog_back"
+            app:layout_constraintTop_toTopOf="@+id/tx_dialog_back"
+            tools:text="生的渴望IC的开始看" />
+
+        <TextView
+            android:id="@+id/tx_device"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_4"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_dialog_back"
+            app:layout_constraintStart_toEndOf="@+id/tx_dialog_back"
+            tools:text="是否规范和青蛙回复" />
+
+        <ImageView
+            android:id="@+id/img_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingStart="@dimen/dp_10"
+            android:src="@mipmap/icon_dialog_more_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_dialog_more_info" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:src="@mipmap/icon_main_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_more_info"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_main_search" />
+
+        <ImageView
+            android:id="@+id/img_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:src="@mipmap/icon_main_online"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_main_online" />
+
+        <com.weis.cloudcreate.view.custom.FillRecycleView
+            android:id="@+id/fill_recycle_view"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toStartOf="@+id/img_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_online"
+            app:layout_constraintStart_toEndOf="@+id/tx_name"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_root"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_dialog_title" />
+
+</android.support.constraint.ConstraintLayout>

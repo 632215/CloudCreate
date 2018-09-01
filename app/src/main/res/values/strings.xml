@@ -80,13 +80,50 @@
     <string name="activity_add_public_tips">精品推荐</string>
 
     <string name="activity_create_public_title">创建群</string>
-    <string name="activity_create_public_title_second">编辑群资料</string>
+    <string name="activity_create_public_title_second">(编辑群资料)</string>
     <string name="activity_create_public_name">群名称</string>
     <string name="activity_create_public_type">群分类</string>
     <string name="activity_create_public_address">群地址</string>
     <string name="activity_create_public_describe">群描述</string>
     <string name="activity_create_public_describe_limit">群简介（不超过300字）</string>
     <string name="activity_create_public_submit">提交</string>
+
+    <string name="activity_setting_title">设置</string>
+    <string name="activity_setting_accout">账号与安全</string>
+    <string name="activity_setting_clear">清空聊天记录</string>
+    <string name="activity_setting_help">帮助与反馈</string>
+    <string name="activity_setting_about">关于</string>
+    <string name="activity_setting_protect">已保护</string>
+    <string name="activity_setting_exit">退出登录</string>
+
+    <string name="activity_my_package">我的钱包</string>
+    <string name="activity_my_package_control">账户管理</string>
+    <string name="activity_my_package_charge">零钱</string>
+    <string name="activity_my_package_recharge">钱包充值</string>
+    <string name="activity_my_package_card">银行卡</string>
+    <string name="activity_my_package_service">服务</string>
+    <string name="activity_my_package_receivables">收款</string>
+    <string name="activity_my_package_transfer">转账</string>
+    <string name="activity_my_package_record">转账记录</string>
+    <string name="activity_my_package_update">修改付款密码</string>
+    <string name="activity_my_package_find">找回付款密码</string>
+
+    <string name="activity_dialog_voice">按住说话</string>
+    <string name="activity_dialog_online">在线</string>
+
+    <string name="activity_person_info_account">云上号：</string>
+    <string name="activity_person_info_rename">设置备注和标签</string>
+    <string name="activity_person_info_phone">电话号码</string>
+    <string name="activity_person_info_area">地区</string>
+    <string name="activity_person_info_album">个人相册</string>
+    <string name="activity_person_info_more">更多</string>
+
+    <string name="fragment_my_set">设置</string>
+    <string name="fragment_my_collection">收藏</string>
+    <string name="fragment_my_mail">邮件</string>
+    <string name="fragment_my_package">钱包</string>
+    <string name="fragment_my_album">相册</string>
+
 
     <string name="ip_all_images">所有图片</string>
     <string name="ip_folder_image_count">共%1$d张</string>

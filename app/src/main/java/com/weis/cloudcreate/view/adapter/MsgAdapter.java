@@ -1,6 +1,8 @@
 package com.weis.cloudcreate.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.bean.MsgBean;
 import com.weis.cloudcreate.utils.GlideUtils;
+import com.weis.cloudcreate.view.activity.DialogActivity;
 
 import java.util.List;
 
@@ -38,18 +41,17 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.MsgHolder> {
 
     @Override
     public void onBindViewHolder(MsgHolder holder, int position) {
-        MsgBean bean = dataList.get(position);
-//        Glide.with(context)
-//                .load(R.mipmap.ic_launcher)
-//                .apply(new RequestOptions()
-//                        .bitmapTransform(new CircleCrop())
-//                        .error(R.mipmap.icon_fail_pic)
-//                        .placeholder(R.mipmap.icon_fail_pic))
-//                .into( holder.imgHead);
-        GlideUtils.setImageId(context,bean.getImgID(),holder.imgHead,true);
+        final MsgBean bean = dataList.get(position);
+        GlideUtils.setImageId(context, bean.getImgID(), holder.imgHead, true);
         holder.txName.setText(bean.getName());
         holder.txContent.setText(bean.getContent());
         holder.txNum.setText(bean.getNum());
+        holder.clRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context,DialogActivity.class).putExtra("MsgBean",bean));
+            }
+        });
     }
 
     @Override
@@ -58,6 +60,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.MsgHolder> {
     }
 
     public class MsgHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout clRoot;
         ImageView imgHead;
         TextView txName;
         TextView txContent;
@@ -65,6 +68,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.MsgHolder> {
 
         public MsgHolder(View itemView) {
             super(itemView);
+            clRoot = itemView.findViewById(R.id.cl_root);
             imgHead = itemView.findViewById(R.id.img_head);
             txName = itemView.findViewById(R.id.tx_name);
             txContent = itemView.findViewById(R.id.tx_content);

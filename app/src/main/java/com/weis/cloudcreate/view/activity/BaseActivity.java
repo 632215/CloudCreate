@@ -8,6 +8,7 @@ import android.support.v4.content.FileProvider;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.presenter.BasePresenter;

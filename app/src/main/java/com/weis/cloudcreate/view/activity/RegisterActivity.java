@@ -63,11 +63,6 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected void initView() {
         showBackView();
-//        Glide.with(this)
-//                .load(R.drawable.shape_circle_head)
-//                .apply(new RequestOptions().bitmapTransform(new CircleCrop())
-//                )
-//                .into(imgHead);
         GlideUtils.setImageId(this,R.drawable.shape_circle_head,imgHead,true);
     }
 

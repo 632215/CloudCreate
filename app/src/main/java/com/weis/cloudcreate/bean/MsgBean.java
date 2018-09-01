@@ -1,10 +1,12 @@
 package com.weis.cloudcreate.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2018/8/4.
  */
 
-public class MsgBean {
+public class MsgBean implements Serializable{
     private int imgID;
     private String name;
     private String content;
