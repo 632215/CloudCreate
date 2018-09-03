@@ -1,12 +1,11 @@
 package com.weis.cloudcreate.view.activity;
 
-import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.OrientationHelper;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,7 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.view.adapter.BusinessAdapter;
 import com.weis.cloudcreate.view.custom.AddPopupWindow;
 import com.weis.cloudcreate.view.custom.CustomRadioButton;
@@ -81,16 +79,12 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private List<String> businessList;
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_main;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_main_title), View.GONE);
         setDefaultFragment();

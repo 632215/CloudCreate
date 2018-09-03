@@ -1,6 +1,8 @@
 package com.weis.cloudcreate.view.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.MotionEvent;
@@ -12,10 +14,9 @@ import android.widget.ImageView;
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.bean.DialogBean;
 import com.weis.cloudcreate.bean.MsgBean;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.utils.AndroidUtils;
 import com.weis.cloudcreate.utils.ToastUtils;
-import com.weis.cloudcreate.view.adapter.DialogAdapter;
+import com.weis.cloudcreate.view.adapter.DiaLogAdapter;
 import com.weis.cloudcreate.view.custom.FillRecycleView;
 
 import java.util.ArrayList;
@@ -45,20 +46,16 @@ public class DialogActivity extends BaseActivity {
     ConstraintLayout clInput;
 
     private MsgBean bean = null;
-    private DialogAdapter dialogAdapter;
+    private DiaLogAdapter dialogAdapter;
     private List<DialogBean> dialoList = new ArrayList<>();
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_dialog;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dialog);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         bean = (MsgBean) getIntent().getSerializableExtra("MsgBean");
         if (bean != null) {
@@ -70,7 +67,7 @@ public class DialogActivity extends BaseActivity {
     //初始化对话消息
     private void initDialogData() {
         if (dialogAdapter == null)
-            dialogAdapter = new DialogAdapter(this, dialoList);
+            dialogAdapter = new DiaLogAdapter(this, dialoList);
         dialoList.clear();
         dialoList.add(new DialogBean(0, 0, "", "", "你好", "", ""));
         dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
@@ -81,14 +78,16 @@ public class DialogActivity extends BaseActivity {
         dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
         dialoList.add(new DialogBean(0, 0, "", "", "初次认识", "", ""));
         dialoList.add(new DialogBean(0, 0, "", "", "那你是哪里人呀", "", ""));
-        dialoList.add(new DialogBean(1, 1, "", "", "你好", "", "")); LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        dialoList.add(new DialogBean(1, 1, "", "", "你好", "", ""));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         dialoList.add(new DialogBean(0, 0, "", "", "你好", "", ""));
         dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
         dialoList.add(new DialogBean(0, 0, "", "", "初次认识", "", ""));
         dialoList.add(new DialogBean(0, 0, "", "", "那你是哪里人呀", "", ""));
-        dialoList.add(new DialogBean(1, 0, "", "", "你好", "", ""));   recycleViewDialog.setLayoutManager(linearLayoutManager);
+        dialoList.add(new DialogBean(1, 0, "", "", "你好", "", ""));
+        recycleViewDialog.setLayoutManager(linearLayoutManager);
         recycleViewDialog.setAdapter(dialogAdapter);
-        recycleViewDialog.smoothScrollToPosition(dialogAdapter.getItemCount()-1);
+        recycleViewDialog.smoothScrollToPosition(dialogAdapter.getItemCount() - 1);
     }
 
     @Override
@@ -121,7 +120,7 @@ public class DialogActivity extends BaseActivity {
             , R.id.fill_recycle_view
             , R.id.et_input
             , R.id.btn_voice
-            })
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_input_type:
@@ -158,6 +157,6 @@ public class DialogActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        recycleViewDialog.scrollToPosition(dialoList.size()-1);
+        recycleViewDialog.scrollToPosition(dialoList.size() - 1);
     }
 }

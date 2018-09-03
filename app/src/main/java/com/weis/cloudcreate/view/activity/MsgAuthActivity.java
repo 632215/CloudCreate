@@ -1,12 +1,10 @@
 package com.weis.cloudcreate.view.activity;
 
-import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
-
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/7/30.
@@ -14,24 +12,14 @@ import butterknife.OnClick;
 
 public class MsgAuthActivity extends BaseActivity {
     @Override
-    protected int getContentView() {
-        return R.layout.activity_msg_auth;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_msg_auth);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_msg_confirm), View.VISIBLE);
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
 //    @OnClick({R.id.img_sure})

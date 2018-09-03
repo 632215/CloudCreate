@@ -19,7 +19,7 @@ import java.util.Stack;
  * @created 2015-9-21
  */
 public class AcitivityUtils {
-    private static Stack<FragmentActivity> activityStack = new Stack();
+    private static Stack<FragmentActivity> activityStack = new Stack<>();
 
     /**
      * 添加Activity到堆栈

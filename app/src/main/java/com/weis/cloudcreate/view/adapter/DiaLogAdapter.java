@@ -19,19 +19,18 @@ import java.util.List;
  * Created by Administrator on 2018/8/4.
  */
 
-public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.MsgHolder> {
+public class DiaLogAdapter extends RecyclerView.Adapter<DiaLogAdapter.MsgHolder> {
     private Context context;
     private List<DialogBean> dataList = null;
 
-    public DialogAdapter(Context context, List<DialogBean> dataList) {
+    public DiaLogAdapter(Context context, List<DialogBean> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
 
     @Override
     public MsgHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        MsgHolder holder = new MsgHolder(LayoutInflater.from(context).inflate(R.layout.item_dialog, parent, false));
-        return holder;
+        return new MsgHolder(LayoutInflater.from(context).inflate(R.layout.item_dialog, parent, false));
     }
 
     @Override

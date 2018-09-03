@@ -2,28 +2,27 @@ package com.weis.cloudcreate.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
+import com.weis.cloudcreate.anno.Presentor;
+import com.weis.cloudcreate.presenter.LoginPresenter;
 import com.weis.cloudcreate.utils.AcitivityUtils;
-import com.weis.cloudcreate.utils.AppUtils;
 import com.weis.cloudcreate.utils.StatusBarUtils;
-import com.weis.cloudcreate.utils.StringUtils;
-import com.weis.cloudcreate.utils.ToastUtils;
+import com.weis.cloudcreate.view.ui.LoginView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/7/30.
  */
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity implements LoginView{
     @BindView(R.id.img_exit)
     ImageView imgExit;
     @BindView(R.id.et_name)
@@ -44,18 +43,16 @@ public class LoginActivity extends BaseActivity {
     TextView txWechat;
     @BindView(R.id.tx_ali)
     TextView txAli;
+    @Presentor
+    LoginPresenter presenter;
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_login;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         StatusBarUtils.setWindowStatusBarColor(this, R.color.color_white, 1);
     }
@@ -72,7 +69,7 @@ public class LoginActivity extends BaseActivity {
                 break;
 
             case R.id.img_login:
-                checkInput();
+                presenter.login(etName.getText().toString(),etPwd.getText().toString());
                 break;
 
             case R.id.tx_visitor:
@@ -90,14 +87,9 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
-    private void checkInput() {
-        if (StringUtils.isEmpty(etName.getText().toString().trim())) {
-            ToastUtils.showShort(this, "请输入姓名！");
-            return;
-        }
-        if (StringUtils.isEmpty(etPwd.getText().toString().trim())) {
-            ToastUtils.showShort(this, "请输入密码！");
-            return;
-        }
+    @Override
+    public void loginSucceed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

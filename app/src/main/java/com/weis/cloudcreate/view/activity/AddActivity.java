@@ -1,5 +1,7 @@
 package com.weis.cloudcreate.view.activity;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -7,7 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.view.adapter.FragmentAdapter;
 import com.weis.cloudcreate.view.fragment.AddGroupFragment;
 import com.weis.cloudcreate.view.fragment.AddHumanFragment;
@@ -31,16 +32,12 @@ public class AddActivity extends BaseActivity {
     private ArrayList<String> titleList;
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_add;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_add_title), View.VISIBLE);
         initData();
@@ -74,12 +71,6 @@ public class AddActivity extends BaseActivity {
         ViewHolder holder = new ViewHolder(tab.getCustomView());
         holder.txTitle.setText(title);
         holder.txTitle.setTextSize(14f);
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
     class ViewHolder {

@@ -1,17 +1,12 @@
 package com.weis.cloudcreate.view.fragment;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2018/8/3.
@@ -24,11 +19,6 @@ public class SaleFragment extends BaseFragment {
     @Override
     protected int getContentView() {
         return R.layout.fragment_sale;
-    }
-
-    @Override
-    BasePresenter setPresenter() {
-        return null;
     }
 
     @Override

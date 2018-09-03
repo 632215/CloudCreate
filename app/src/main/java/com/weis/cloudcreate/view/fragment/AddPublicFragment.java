@@ -7,13 +7,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.bean.AddHumanBean;
 import com.weis.cloudcreate.bean.AddPublicBean;
-import com.weis.cloudcreate.presenter.BasePresenter;
-import com.weis.cloudcreate.view.adapter.AddHumanAdapter;
 import com.weis.cloudcreate.view.adapter.AddPublicAdapter;
 import com.weis.cloudcreate.view.custom.FillRecycleView;
-import com.weis.cloudcreate.view.fragment.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,11 +36,6 @@ public class AddPublicFragment extends BaseFragment {
     @Override
     protected int getContentView() {
         return R.layout.fragment_add;
-    }
-
-    @Override
-    BasePresenter setPresenter() {
-        return null;
     }
 
     @Override

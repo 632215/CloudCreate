@@ -1,8 +1,6 @@
 package com.weis.cloudcreate.view.activity;
 
 import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,8 +18,6 @@ import com.weis.cloudcreate.view.custom.FillRecycleView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
 
 /**
  * Created by Administrator on 2018/7/30.
@@ -48,9 +44,32 @@ public class TitleActivity extends FragmentActivity {
     private BusinessAdapter businessAdapter;
     private List<String> businessList;
 
+    //对话框更多信息按钮回调事件
+    protected void onMoreInfo() {
+    }
+
+    //对话框返回按钮回调事件
+    protected void dialogBback() {
+    }
+
+    //对话框直播按钮点击事件
+    protected void onLine() {
+    }
+
+    //对话框搜索按钮点击事件
+    protected void search() {
+    }
+
+    //前进按钮点击事件
+    protected void preview() {
+    }
+
+    //返回按钮点击事件
+    protected void back() {
+    }
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void setContentView(int layoutResID) {
         super.setContentView(R.layout.activity_title);
         clRoot = findViewById(R.id.cl_root);
         flRoot = findViewById(R.id.fl_root);
@@ -107,34 +126,7 @@ public class TitleActivity extends FragmentActivity {
         if (Build.VERSION.SDK_INT < 21) {
             clRoot.setPadding(0, 0, 0, 0);
         }
-    }
 
-    //对话框更多信息按钮回调事件
-    protected void onMoreInfo() {
-    }
-
-    //对话框返回按钮回调事件
-    protected void dialogBback() {
-    }
-
-    //对话框直播按钮点击事件
-    protected void onLine() {
-    }
-
-    //对话框搜索按钮点击事件
-    protected void search() {
-    }
-
-    //前进按钮点击事件
-    protected void preview() {
-    }
-
-    //返回按钮点击事件
-    protected void back() {
-    }
-
-    @Override
-    public void setContentView(int layoutResID) {
         flRoot.removeAllViews();
         View.inflate(this, layoutResID, flRoot);
         onContentChanged();

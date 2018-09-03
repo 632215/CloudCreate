@@ -136,5 +136,7 @@
     <string name="ip_photo_crop">图片裁剪</string>
     <string name="ip_origin">原图</string>
     <string name="ip_origin_size">原图(%1$s)</string>
+    <string name="please_wait">请稍后</string>
+    <string name="input_user_name">请输入姓名</string>
 
 </resources>

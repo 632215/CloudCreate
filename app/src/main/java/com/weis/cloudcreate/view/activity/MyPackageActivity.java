@@ -6,8 +6,6 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
-import com.weis.cloudcreate.view.custom.AddPopupWindow;
 import com.weis.cloudcreate.view.custom.PackagePopupWindow;
 
 import butterknife.BindView;
@@ -20,26 +18,17 @@ public class MyPackageActivity extends BaseActivity {
     private PackagePopupWindow packagePopupWindow;
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_my_package;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_package);
+        ButterKnife.bind(this);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_my_package), View.VISIBLE);
         setPreviewText(getString(R.string.activity_my_package_control), View.VISIBLE);
         txChargeValue.setText("￥0.00");
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
     @Override
@@ -48,13 +37,6 @@ public class MyPackageActivity extends BaseActivity {
         if (packagePopupWindow == null)
             packagePopupWindow = new PackagePopupWindow();
         packagePopupWindow.initPopupWindow(this, getPreviewView());
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.rl_charge, R.id.tx_recharge, R.id.tx_card, R.id.tx_transfer, R.id.tx_receivables})

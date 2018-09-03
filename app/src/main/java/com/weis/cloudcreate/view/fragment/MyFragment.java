@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.utils.GlideUtils;
 import com.weis.cloudcreate.view.activity.MyPackageActivity;
 import com.weis.cloudcreate.view.activity.SettingActivity;
@@ -42,11 +41,6 @@ public class MyFragment extends BaseFragment {
     @Override
     protected int getContentView() {
         return R.layout.fragment_my;
-    }
-
-    @Override
-    BasePresenter setPresenter() {
-        return null;
     }
 
     @Override

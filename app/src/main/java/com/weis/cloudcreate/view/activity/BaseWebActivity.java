@@ -26,7 +26,6 @@ import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
 import com.github.lzyzsd.jsbridge.CallBackFunction;
 import com.github.lzyzsd.jsbridge.DefaultHandler;
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.utils.ToastUtils;
 import com.weis.cloudcreate.view.custom.UpProgressBar;
 
@@ -51,26 +50,17 @@ public class BaseWebActivity extends BaseActivity {
     private String url = "http://www.baidu.com";
 
     @Override
-    protected int getContentView() {
-        return R.layout.web_activity;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.web_activity);
+        initView();
+        ButterKnife.bind(this);
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         url = getIntent().getStringExtra("url");
         setTitleText(getIntent().getStringExtra("title"), View.VISIBLE);
         initWebView();
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
     @Override
@@ -144,12 +134,7 @@ public class BaseWebActivity extends BaseActivity {
         mWebView.loadUrl(url);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 
     public class MyWebViewClient extends BridgeWebViewClient {
         public MyWebViewClient(BridgeWebView webView) {

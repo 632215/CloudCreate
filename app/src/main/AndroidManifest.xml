@@ -56,7 +56,7 @@
             android:theme="@style/ImagePickerThemeFullScreen" />
         <!--仿微信图片选择-->
 
-        //登录
+        <!--//登录-->
         <activity
             android:name=".view.activity.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

@@ -2,6 +2,8 @@ package com.weis.cloudcreate.view.activity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -12,7 +14,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.third.image.ImagePicker;
 import com.weis.cloudcreate.third.image.bean.ImageItem;
 import com.weis.cloudcreate.third.image.ui.ImageGridActivity;
@@ -51,27 +52,16 @@ public class CreateGroupActivity extends BaseActivity implements CreateGroupWind
     private String headUri = null;
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_create_group;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_group);
+        initView();
     }
-
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_create_public_title), View.VISIBLE);
         setTxTitleSecond(getString(R.string.activity_create_public_title_second));
         setPreviewText(getString(R.string.activity_create_public_submit), View.VISIBLE);
         GlideUtils.setImageId(this, R.drawable.shape_circle_head, imgHead, true);
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
     @Override

@@ -6,7 +6,6 @@ import android.view.View;
 
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.bean.MsgBean;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.view.adapter.MsgAdapter;
 import com.weis.cloudcreate.view.custom.FillRecycleView;
 
@@ -29,11 +28,6 @@ public class MsgFragment extends BaseFragment {
     @Override
     protected int getContentView() {
         return R.layout.fragment_msg;
-    }
-
-    @Override
-    BasePresenter setPresenter() {
-        return null;
     }
 
     @Override

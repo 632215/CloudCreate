@@ -1,10 +1,11 @@
 package com.weis.cloudcreate.view.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 
 import butterknife.OnClick;
 
@@ -15,24 +16,14 @@ import butterknife.OnClick;
 public class ResetPwdActivity extends BaseActivity {
 
     @Override
-    protected int getContentView() {
-        return R.layout.activity_reset_pwd;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_reset_pwd);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_reset_pwd_title), View.VISIBLE);
-    }
-
-    @Override
-    protected void back() {
-        super.back();
-        finish();
     }
 
     @OnClick({R.id.img_sure})

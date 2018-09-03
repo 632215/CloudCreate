@@ -1,51 +1,44 @@
 package com.weis.cloudcreate.view.activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
-import android.support.v4.content.FileProvider;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
+import android.widget.Toast;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
-import com.weis.cloudcreate.utils.AcitivityUtils;
-import com.weis.cloudcreate.utils.ConnectUtils;
 import com.weis.cloudcreate.utils.StatusBarUtils;
-import com.weis.cloudcreate.utils.ToastUtils;
+import com.weis.cloudcreate.view.BaseView;
 
 import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2018/7/30.
+ * 基础类
  */
 
-public abstract class BaseActivity<V, T extends BasePresenter<V>> extends TitleActivity {
-    private T presenter;
+public abstract class BaseActivity extends TitleActivity implements BaseView {
+    protected ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getContentView());
-        if (!ConnectUtils.isNetworkConnected(this))
-            ToastUtils.showLong(this, getString(R.string.app_net_tips));
         StatusBarUtils.setWindowStatusBarColor(this, R.color.title_bg, 0);
-        ButterKnife.bind(this);
-        AcitivityUtils.addActivity(this);
-        presenter = setPresenter();
-        if (presenter != null)
-            presenter.attach((V) this);
-        initView();
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (presenter != null)
-            presenter.disAttach();
+    public void setContentView(View view) {
+        super.setContentView(view);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+        ButterKnife.bind(this);
     }
 
     @Override
@@ -74,9 +67,48 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends TitleA
         }
     }
 
-    protected abstract int getContentView();
+    protected void back() {
+        finish();
+    }
 
-    protected abstract T setPresenter();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
-    protected abstract void initView();
+    @Override
+    public void toast(int msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void toast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showProgress() {
+        showProgress(R.string.please_wait);
+    }
+
+    @Override
+    public void showProgress(int msg) {
+        showProgress(getString(msg));
+    }
+
+    @Override
+    public void showProgress(String msg) {
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
+        }
+        progressDialog.setMessage(msg);
+        progressDialog.show();
+    }
+
+    @Override
+    public void dismissProgress() {
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+        }
+    }
 }

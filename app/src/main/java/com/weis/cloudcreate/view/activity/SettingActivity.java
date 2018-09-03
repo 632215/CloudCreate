@@ -1,29 +1,21 @@
 package com.weis.cloudcreate.view.activity;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.weis.cloudcreate.R;
-import com.weis.cloudcreate.presenter.BasePresenter;
 
 public class SettingActivity extends BaseActivity {
     @Override
-    protected int getContentView() {
-        return R.layout.activity_setting;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_setting);
+        initView();
     }
 
-    @Override
-    protected BasePresenter setPresenter() {
-        return null;
-    }
-
-    @Override
     protected void initView() {
         setTitleText(getString(R.string.activity_setting_title), View.VISIBLE);
     }
 
-    @Override
-    protected void back() {
-        super.back();
-        finish();
-    }
 }

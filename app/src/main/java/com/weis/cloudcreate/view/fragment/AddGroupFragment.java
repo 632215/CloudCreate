@@ -8,10 +8,7 @@ import android.widget.TextView;
 
 import com.weis.cloudcreate.R;
 import com.weis.cloudcreate.bean.AddGroupBean;
-import com.weis.cloudcreate.bean.AddHumanBean;
-import com.weis.cloudcreate.presenter.BasePresenter;
 import com.weis.cloudcreate.view.adapter.AddGroupAdapter;
-import com.weis.cloudcreate.view.adapter.AddHumanAdapter;
 import com.weis.cloudcreate.view.custom.FillRecycleView;
 
 import java.util.ArrayList;
@@ -37,11 +34,6 @@ public class AddGroupFragment extends BaseFragment {
     @Override
     protected int getContentView() {
         return R.layout.fragment_add;
-    }
-
-    @Override
-    BasePresenter setPresenter() {
-        return null;
     }
 
     @Override
