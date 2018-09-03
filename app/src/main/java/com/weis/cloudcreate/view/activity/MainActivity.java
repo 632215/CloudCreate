@@ -62,8 +62,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     ImageView imgSearch;
     @BindView(R.id.img_online)
     ImageView imgOnline;
-    @BindView(R.id.img_more)
-    ImageView imgMore;
     @BindView(R.id.recycle_view_business)
     FillRecycleView recycleViewBusiness;
     @BindView(R.id.textView2)
@@ -202,8 +200,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     @OnClick({R.id.tx_main_left
             , R.id.img_add
             , R.id.img_search
-            , R.id.img_online
-            , R.id.img_more})
+            , R.id.img_online})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tx_main_left:

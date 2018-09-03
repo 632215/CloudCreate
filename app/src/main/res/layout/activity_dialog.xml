@@ -5,22 +5,37 @@
     android:layout_height="match_parent"
     android:background="@color/color_bg">
 
-    <ScrollView
-        android:id="@+id/scroll_view"
+    <!--<ScrollView-->
+    <!--android:id="@+id/scroll_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_0"-->
+    <!--android:layout_above="@+id/cl_input"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="@color/color_bg"-->
+    <!--android:fillViewport="true"-->
+    <!--android:scrollbars="none">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<com.weis.cloudcreate.view.custom.FillRecycleView-->
+    <!--android:id="@+id/recycle_view_dialog"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:nestedScrollingEnabled="false"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+    <com.weis.cloudcreate.view.custom.FillRecycleView
+        android:id="@+id/recycle_view_dialog"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_0"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/cl_input"
         android:layout_alignParentTop="true"
         android:background="@color/color_bg"
-        android:fillViewport="true"
-        android:scrollbars="none">
-
-        <com.weis.cloudcreate.view.custom.FillRecycleView
-            android:id="@+id/recycle_view_dialog"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </ScrollView>
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="none" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@id/cl_input"

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tx_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/shape_dialog_time_bg"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_6"
+        android:paddingStart="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_2"
+        android:textColor="@color/activity_dialog_text1"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        tools:text="12:11" />
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_head_left"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@mipmap/ic_launcher_round"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tx_msg_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_head_left"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/img_head_left"
+            android:background="@drawable/icon_left"
+            android:gravity="center_vertical"
+            android:textColor="@color/fragment_msg_text1"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            tools:text="aaaaaa" />
+
+        <ImageView
+            android:id="@+id/img_msg_left"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignTop="@+id/img_head_left"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/img_head_left"
+            android:scaleType="matrix"
+            android:src="@mipmap/demo"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_head_right"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_launcher_round"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tx_msg_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/icon_right"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            tools:text="aaaaaa" />
+
+        <ImageView
+            android:id="@+id/img_msg_right"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/img_head_right"
+            android:layout_toStartOf="@+id/img_head_right"
+            android:scaleType="matrix"
+            android:src="@mipmap/demo"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

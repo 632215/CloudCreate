@@ -42,14 +42,6 @@
             android:padding="@dimen/dp_5"
             android:src="@mipmap/icon_main_online" />
 
-        <ImageView
-            android:id="@+id/img_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/img_online"
-            android:src="@mipmap/icon_main_more" />
-
         <com.weis.cloudcreate.view.custom.FillRecycleView
             android:id="@+id/recycle_view_business"
             android:layout_width="match_parent"
@@ -57,7 +49,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_6"
-            android:layout_toStartOf="@+id/img_more" />
+            android:layout_toStartOf="@+id/img_online" />
     </RelativeLayout>
 
     <FrameLayout

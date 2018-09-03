@@ -39,6 +39,10 @@ public class DialogActivity extends BaseActivity {
     ConstraintLayout clInputBottom;
     @BindView(R.id.btn_voice)
     Button btnVoice;
+    @BindView(R.id.cl_input_top)
+    ConstraintLayout clInputTop;
+    @BindView(R.id.cl_input)
+    ConstraintLayout clInput;
 
     private MsgBean bean = null;
     private DialogAdapter dialogAdapter;
@@ -68,15 +72,23 @@ public class DialogActivity extends BaseActivity {
         if (dialogAdapter == null)
             dialogAdapter = new DialogAdapter(this, dialoList);
         dialoList.clear();
-        dialoList.add(new DialogBean(0, 0, "","","你好","",""));
-        dialoList.add(new DialogBean(1, 0, "","","你好呀","",""));
-        dialoList.add(new DialogBean(0, 1, "","","初次认识","",""));
-        dialoList.add(new DialogBean(0, 1, "","","那你是哪里人呀","",""));
-        dialoList.add(new DialogBean(1, 0, "","","你好","",""));
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
-        linearLayoutManager.setStackFromEnd(true);
-        recycleViewDialog.setLayoutManager(linearLayoutManager);
+        dialoList.add(new DialogBean(0, 0, "", "", "你好", "", ""));
+        dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "初次认识", "", ""));
+        dialoList.add(new DialogBean(0, 1, "", "", "那你是哪里人呀", "", ""));
+        dialoList.add(new DialogBean(1, 0, "", "", "你好", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "你好", "", ""));
+        dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "初次认识", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "那你是哪里人呀", "", ""));
+        dialoList.add(new DialogBean(1, 1, "", "", "你好", "", "")); LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        dialoList.add(new DialogBean(0, 0, "", "", "你好", "", ""));
+        dialoList.add(new DialogBean(1, 0, "", "", "你好呀", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "初次认识", "", ""));
+        dialoList.add(new DialogBean(0, 0, "", "", "那你是哪里人呀", "", ""));
+        dialoList.add(new DialogBean(1, 0, "", "", "你好", "", ""));   recycleViewDialog.setLayoutManager(linearLayoutManager);
         recycleViewDialog.setAdapter(dialogAdapter);
+        recycleViewDialog.smoothScrollToPosition(dialogAdapter.getItemCount()-1);
     }
 
     @Override
@@ -109,7 +121,7 @@ public class DialogActivity extends BaseActivity {
             , R.id.fill_recycle_view
             , R.id.et_input
             , R.id.btn_voice
-            , R.id.scroll_view})
+            })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_input_type:
@@ -141,5 +153,11 @@ public class DialogActivity extends BaseActivity {
         if (clInputBottom.getVisibility() == View.VISIBLE)
             clInputBottom.setVisibility(View.GONE);
         return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        recycleViewDialog.scrollToPosition(dialoList.size()-1);
     }
 }
