@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_video_center_box"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/bg_video_center"
+    android:visibility="gone">
+
+    <!-- volume -->
+    <TextView
+        android:id="@+id/txt_video_volume"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:drawableTop="@drawable/ic_volume_up_white"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:text="50%" />
+
+    <!-- fast forward -->
+    <RelativeLayout
+        android:id="@+id/layout_video_fast_forward_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_video_fast_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="50%" />
+
+        <TextView
+            android:id="@+id/txt_video_fast_forward_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_video_fast_forward"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="50%" />
+
+        <TextView
+            android:id="@+id/txt_video_fast_forward_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txt_video_fast_forward_target"
+            android:layout_toRightOf="@id/txt_video_fast_forward_target"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"
+            tools:text="50%" />
+
+    </RelativeLayout>
+
+    <!-- brightness -->
+    <TextView
+        android:id="@+id/txt_video_brightness"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:drawableTop="@drawable/ic_brightness_6_white"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:text="50%" />
+
+</FrameLayout>
